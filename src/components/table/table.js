@@ -1,16 +1,15 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
-import { tableItems } from '../../mock/mock';
 
-const Table = () => {
+const Table = ({ tableItems, onSort }) => {
   return (
     <table className="table">
       <thead>
         <tr>
           <th>Дата</th>
-          <th>Название</th>
-          <th>Количество</th>
-          <th>Расстояние</th>
+          <th onClick={onSort.bind(null, 'title')}>Название</th>
+          <th onClick={onSort.bind(null, 'amount')}>Количество</th>
+          <th onClick={onSort.bind(null, 'distance')}>Расстояние</th>
         </tr>
       </thead>
       <tbody>

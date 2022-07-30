@@ -55,4 +55,4 @@ const renderTableItems = () => {
   return array;
 };
 
-export const tableItems = renderTableItems();
+export const items = renderTableItems();
